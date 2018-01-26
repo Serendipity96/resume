@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13fe08cc-09c8-4965-a5b1-1b3958e862b3" name="Default" comment="complete nav and logo">
+    <list default="true" id="13fe08cc-09c8-4965-a5b1-1b3958e862b3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -147,7 +145,7 @@
       <workItem from="1516765028076" duration="5254000" />
       <workItem from="1516843813030" duration="5728000" />
       <workItem from="1516868576108" duration="2411000" />
-      <workItem from="1516932770408" duration="3063000" />
+      <workItem from="1516932770408" duration="3074000" />
     </task>
     <task id="LOCAL-00001" summary="add skills and jobs in HTML">
       <created>1516769782013</created>
@@ -163,11 +161,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516856092675</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="complete nav and logo">
+      <created>1516935840603</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1516935840603</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24257000" />
+    <option name="totallyTimeSpent" value="24268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
