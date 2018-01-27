@@ -1,6 +1,6 @@
 body {
-    background: black;
-    color: #fff;
+    background: #efefef;
+    color: #000;
     margin: 0;
 }
 
@@ -9,28 +9,54 @@ a {
     text-decoration: none;
 }
 
-.topNavBar{
+* {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    height: 0;
+    border: none;
+    border-top: 1px solid #dedede;
+}
+
+/*把清除效果加在浮动元素爸爸身上，li要加在对应的ul上*/
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.topNavBar {
+    position: fixed; /*脱离文档流，相对于浏览器定位*/
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.topNavBar-inner {
     padding: 20px 16px;
 }
-.topNavBar>nav {
+
+.topNavBar nav {
     float: right;
     padding-top: 7px;
 }
 
-.topNavBar > nav > ul {
-    /*自带默认样式marg16，padding40*/
+.topNavBar nav ul {
+    /*自带默认样式margin16，padding40*/
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.topNavBar > nav > ul > li {
+.topNavBar nav ul li {
     float: left;
     margin-left: 17px;
     margin-right: 17px;
 }
 
-.topNavBar > nav > ul > li > a {
+.topNavBar nav ul li a {
     font-size: 12px;
     color: #b7b7b7;
     font-weight: bold;
@@ -41,7 +67,7 @@ a {
     display: block; /*解决a比li高，li没有包住a*/
 }
 
-.topNavBar > nav > ul > li > a:hover {
+.topNavBar nav ul li a:hover {
     border-bottom: 3px solid #e06567;
 }
 
@@ -63,9 +89,111 @@ a {
     color: #9a9da2;
 }
 
-/*把清除效果加在浮动元素爸爸身上，li要加在对应的ul上*/
-.clearfix:after {
-    content: '';
+.banner {
+    height: 515px; /*不到没有办法，千万不要写height，经验告诉：出bug啊*/
+    background-image: url("../img/rs-cover.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner .mask {
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.userCard {
+    max-width: 940px; /*可以自适应浏览器大小，没有下部滚动条*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+.userCard .welcome {
+    background-color: #e6686a;
+    color: #ffffff;
+    /*不要写宽高的数值，span不接受设置的宽高，内联元素的特点*/
+    display: inline-block; /*这样就接受宽高*/
+    /*这么写很容易有bug，不要下面这么写,文字一变长就出现bug了*/
+    /*width: 70px;*/
+    /*height: 29px;*/
+    /*text-align: center;*/
+    line-height: 22px;
+    padding: 4px 15px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.userCard .welcome .triangle {
+    position: absolute;
     display: block;
-    clear: both;
+    border: 10px solid transparent;
+    border-left-color: #e6686a;
+    border-top-width: 0;
+    /*调整小三角位置*/
+    left: 4px;
+    top: 100%; /*三角形上边缘距离父元素高度的100%，即：长方形的下边缘*/
+}
+
+.userCard .picture {
+    float: left;
+}
+
+.userCard .text {
+    float: left;
+    margin-left: 65px;
+    width: 470px;
+}
+
+.userCard .text h1 {
+    margin-top: 18px;
+}
+
+.userCard .text hr {
+    margin: 20px 0;
+}
+
+.userCard .pictureAndText {
+    padding: 50px;
+}
+
+.userCard dt,
+.userCard dd {
+    float: left;
+    padding: 5px 0;
+}
+
+.userCard dt {
+    width: 30%;
+    font-weight: bold;
+}
+
+.userCard dd {
+    width: 70%;
+    color: #9da0a7;
+}
+
+.userCard > footer.media {
+    background: #e6686a;
+    text-align: center;
+}
+
+.userCard svg {
+    height: 30px;
+    width: 30px;
+    fill: white;
+    /*margin: 0 16px;*/
+    vertical-align: top;
+}
+
+.userCard > footer.media > a {
+    display: inline-block;
+    width: 40px;
+    padding: 5px 0;
+    line-height: 30px;
+    border-radius: 50%;
+    margin: 16px;
+}
+
+.userCard > footer.media > a:hover {
+    background: #cf505f;
 }
