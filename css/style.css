@@ -106,6 +106,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
 }
 
 .userCard .welcome {
@@ -159,7 +160,7 @@ hr {
 .userCard dt,
 .userCard dd {
     float: left;
-    padding: 5px 0;
+    padding: 13px 0;
 }
 
 .userCard dt {
@@ -197,3 +198,33 @@ hr {
 .userCard > footer.media > a:hover {
     background: #cf505f;
 }
+
+body > main .downloadResume{
+    font-size: 14px;
+    line-height: 16px;
+    padding: 21px 55px;
+    display: inline-block;
+    border: 1px solid #cbcdcf;
+    color: #3d4451;
+    background: #efefef;
+    border-radius: 2px;
+    font-weight: bold;
+    margin: 32px 0;
+    transition: box-shadow 0.3s;
+}
+body > main .downloadResume:hover{
+    box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.3);
+}
+
+body > main .downloadResume-wrapper{
+    text-align: center;
+}
+.selfIntroduction{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+
