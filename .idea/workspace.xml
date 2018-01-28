@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13fe08cc-09c8-4965-a5b1-1b3958e862b3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -162,7 +160,7 @@
       <workItem from="1516932770408" duration="7488000" />
       <workItem from="1517018458295" duration="18519000" />
       <workItem from="1517129025027" duration="2463000" />
-      <workItem from="1517142612103" duration="9342000" />
+      <workItem from="1517142612103" duration="9423000" />
     </task>
     <task id="LOCAL-00001" summary="add skills and jobs in HTML">
       <created>1516769782013</created>
@@ -206,17 +204,23 @@
       <option name="project" value="LOCAL" />
       <updated>1517131342576</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add skills and portfolio">
+      <created>1517151986765</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1517151986765</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59006000" />
+    <option name="totallyTimeSpent" value="59087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291815" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -248,7 +252,8 @@
     <MESSAGE value="complete nav and logo" />
     <MESSAGE value="complete introduce card" />
     <MESSAGE value="add download button style" />
-    <option name="LAST_COMMIT_MESSAGE" value="add download button style" />
+    <MESSAGE value="add skills and portfolio" />
+    <option name="LAST_COMMIT_MESSAGE" value="add skills and portfolio" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
