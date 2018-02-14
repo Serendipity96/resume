@@ -18,20 +18,34 @@
 <body>
 
 
-<div class="topNavBar">
+<div id="topNavBar" class="topNavBar">
     <div class="topNavBar-inner clearfix">
         <a class="logo" href="#">
             <span class="rs">RS</span><span class="card">card</span><!--span标签之间有空格和没有空格的区别-->
         </a>
-        <nav>
+        <nav class="menu">
             <ul class="clearfix">
-                <li><a href="#">关于</a></li>
-                <li><a href="#">技能</a></li>
-                <li><a href="#">作品</a></li>
-                <li><a href="#">博客</a></li>
-                <li><a href="#">日历</a></li>
-                <li><a href="#">联系方式</a></li>
-                <li><a href="#">其他</a></li>
+                <li><a href="#siteAbout">关于</a></li>
+                <li><a href="#siteSkills">技能</a></li>
+                <li>
+                    <a href="#siteWorks">作品</a>
+                    <ul class="submenu">
+                        <li>Demo1</li>
+                        <li>Demo2</li>
+                        <li>Demo3</li>
+                    </ul>
+                </li>
+                <li><a href="#siteBlog">博客</a></li>
+                <li><a href="#siteCalendar">日历</a></li>
+                <li>
+                    <a href="#siteContact">联系方式</a>
+                    <ul class="submenu">
+                        <li>QQ</li>
+                        <li>微信</li>
+                        <li>GitHub</li>
+                    </ul>
+                </li>
+                <li><a href="#siteMessage">留言</a></li>
             </ul>
         </nav>
     </div>
@@ -41,7 +55,7 @@
     <div class="mask"></div>
 </div>
 <main style="margin-top: -340px">
-    <div class="userCard">
+    <div id="siteAbout" class="userCard">
         <div class="pictureAndText clearfix">
             <div class="picture">
                 <img src="./img/avatar.jpg" width="299" height="347" alt="头像">
@@ -92,7 +106,7 @@
         赵若妃，前端在学，计算机专业，大三。技能：HTML CSS JavaScript
     </p>
 </main>
-<section class="skills">
+<section id="siteSkills" class="skills">
     <h2>技能</h2>
     <ol class="clearfix">
         <li>
@@ -145,7 +159,7 @@
         </li>
     </ol>
 </section>
-<section class="portfolio">
+<section id="siteWorks" class="portfolio">
     <h2>作品集</h2>
     <nav>
         <ol class="clearfix">
@@ -157,17 +171,7 @@
             <div class="bar-inner"></div>
         </div>
     </nav>
-    <script>
-        portfolio1.onclick = function () {
-            portfolioBar.className = 'bar state-1'
-        }
-        portfolio2.onclick = function () {
-            portfolioBar.className = 'bar state-2'
-        }
-        portfolio3.onclick = function () {
-            portfolioBar.className = 'bar state-3'
-        }
-    </script>
+
     <div class="works" style="height: 597px;">
         <div class="big" style="top:0;left: 0;">
             <img src="./img/1.jpg" alt="portfolio1">
@@ -180,5 +184,53 @@
         </div>
     </div>
 </section>
+
+<script>
+    //作品slide
+    portfolio1.onclick = function () {
+        portfolioBar.className = 'bar state-1'
+    };
+    portfolio2.onclick = function () {
+        portfolioBar.className = 'bar state-2'
+    };
+    portfolio3.onclick = function () {
+        portfolioBar.className = 'bar state-3'
+    };
+
+    //menu slide
+    window.onscroll = function () {
+        if (window.scrollY > 0) {
+            topNavBar.classList.add('sticky');
+        } else {
+            topNavBar.classList.remove('sticky');
+        }
+    };
+
+    //判断什么时候展示子菜单
+    var liTags = document.querySelectorAll('nav.menu ul li');
+    for (var i = 0; i < liTags.length; i++) {
+        liTags[i].onmouseenter = function (ev) {
+            ev.currentTarget.classList.add('active');
+        };
+        liTags[i].onmouseleave = function (ev) {
+            ev.currentTarget.classList.remove('active');
+        };
+    }
+
+    var aTags = document.querySelectorAll('nav.menu ul li a');
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].onclick = function (ev) {
+            ev.preventDefault();//阻止默认事件
+            var a = ev.currentTarget;//获取a标签
+            // console.log(a.href);a.href有http协议
+            var href = a.getAttribute('href');//用户写什么，就获取什么
+            var element = document.querySelector(href);
+            var top = element.offsetTop;//获取元素距离顶部的距离
+            window.scrollTo(0, top - 100);
+        }
+    }
+
+</script>
+
 </body>
 </html>
