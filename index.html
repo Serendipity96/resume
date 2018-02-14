@@ -5,6 +5,7 @@
     <title>赵若妃的个人简历</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="//at.alicdn.com/t/font_556236_ko7vwypx9g6cg14i.js"></script>
+
     <style type="text/css">
         .icon {
             width: 1em;
@@ -185,7 +186,9 @@
     </div>
 </section>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.js"></script>
 <script>
+
     //作品slide
     portfolio1.onclick = function () {
         portfolioBar.className = 'bar state-1'
@@ -217,7 +220,16 @@
         };
     }
 
+    //锚点滚动动画
     var aTags = document.querySelectorAll('nav.menu ul li a');
+
+    function animate(time) {
+        requestAnimationFrame(animate);
+        TWEEN.update(time);
+    }
+
+    requestAnimationFrame(animate);
+
     for (var i = 0; i < aTags.length; i++) {
         aTags[i].onclick = function (ev) {
             ev.preventDefault();//阻止默认事件
@@ -226,7 +238,17 @@
             var href = a.getAttribute('href');//用户写什么，就获取什么
             var element = document.querySelector(href);
             var top = element.offsetTop;//获取元素距离顶部的距离
-            window.scrollTo(0, top - 100);
+
+            var currentTop = window.scrollY;
+            var targetTop = top - 100;
+            var coords = {y: currentTop};
+            var tween = new TWEEN.Tween(coords)
+                .to({y: targetTop}, 1000)
+                .easing(TWEEN.Easing.Quadratic.InOut)
+                .onUpdate(function () {
+                    window.scrollTo(0, coords.y);
+                })
+                .start();
         }
     }
 
