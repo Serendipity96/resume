@@ -56,7 +56,7 @@
     <div class="mask"></div>
 </div>
 <main style="margin-top: -340px">
-    <div id="siteAbout" class="userCard">
+    <div data-x id="siteAbout" class="userCard">
         <div class="pictureAndText clearfix">
             <div class="picture">
                 <img src="./img/avatar.jpg" width="299" height="347" alt="头像">
@@ -107,7 +107,7 @@
         赵若妃，前端在学，计算机专业，大三。技能：HTML CSS JavaScript
     </p>
 </main>
-<section id="siteSkills" class="skills">
+<section data-x id="siteSkills" class="skills">
     <h2>技能</h2>
     <ol class="clearfix">
         <li>
@@ -160,7 +160,7 @@
         </li>
     </ol>
 </section>
-<section id="siteWorks" class="portfolio">
+<section data-x id="siteWorks" class="portfolio">
     <h2>作品集</h2>
     <nav>
         <ol class="clearfix">
@@ -200,6 +200,13 @@
         portfolioBar.className = 'bar state-3'
     };
 
+    //添加offset类
+    var specialTags = document.querySelectorAll('[data-x]');
+    for (var i = 0; i < specialTags.length; i++) {
+        specialTags[i].classList.add('offset');
+    }
+
+    findClosest();
     //menu slide
     window.onscroll = function () {
         if (window.scrollY > 0) {
@@ -207,7 +214,32 @@
         } else {
             topNavBar.classList.remove('sticky');
         }
+        findClosest();
     };
+
+
+    function findClosest() {
+        //菜单栏高亮
+        var specialTags = document.querySelectorAll('[data-x]');
+        var minIndex = 0;//离窗口顶部最近的元素
+        for (var i = 1; i < specialTags.length; i++) {
+            if (Math.abs(specialTags[i].offsetTop - window.scrollY) <
+                Math.abs(specialTags[minIndex].offsetTop - window.scrollY)
+            ){
+                minIndex = i;
+            }
+        }
+
+        specialTags[minIndex].classList.remove('offset');
+        var id = specialTags[minIndex].id;
+        var a = document.querySelector('a[href="#' + id + '"]');
+        var li = a.parentNode;
+        var brothersAndMe = li.parentNode.children;
+        for(var i=0;i<brothersAndMe.length;i++){
+            brothersAndMe[i].classList.remove('highlight');
+        }
+        li.classList.add('highlight');
+    }
 
     //判断什么时候展示子菜单
     var liTags = document.querySelectorAll('nav.menu ul li');
