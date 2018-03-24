@@ -28,25 +28,36 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-[data-x].animate{
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+[data-x].animate {
     animation: slideUp 0.5s;
 }
-[data-x].offset{
+
+[data-x].offset {
     transform: translateY(100px);
 }
-[data-x]{
+
+[data-x] {
     transform: translateY(0);
     transition: .5s;
 }
 
 @keyframes slideUp {
-    0%{
+    0% {
         transform: translateY(-30px);
     }
-    100%{
+    100% {
         transform: translateY(0);
     }
 }
+
 /*把清除效果加在浮动元素爸爸身上，li要加在对应的ul上*/
 .clearfix:after {
     content: '';
@@ -109,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .topNavBar nav ul li.active a::after,
-.topNavBar nav ul li.highlight a::after{
+.topNavBar nav ul li.highlight a::after {
     content: '';
     display: block;
     position: absolute;
@@ -171,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .topNavBar .logo .rs {
     margin-right: 4px;
-    color: #e6686a;
+    color: #E6686A;
 }
 
 .topNavBar .logo .card {
@@ -199,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .userCard .welcome {
-    background-color: #e6686a;
+    background-color: #E6686A;
     color: #ffffff;
     /*不要写宽高的数值，span不接受设置的宽高，内联元素的特点*/
     display: inline-block; /*这样就接受宽高*/
@@ -217,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     display: block;
     border: 10px solid transparent;
-    border-left-color: #e6686a;
+    border-left-color: #E6686A;
     border-top-width: 0;
     /*调整小三角位置*/
     left: 4px;
@@ -263,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .userCard > footer.media {
-    background: #e6686a;
+    background: #E6686A;
     text-align: center;
 }
 
@@ -368,13 +379,13 @@ body > main .downloadResume-wrapper {
 
 .skills .progressBar .progress {
     height: 100%;
-    background: #e6686a;
+    background: #E6686A;
     border-radius: 2px;
     transform: translateX(0);
     transition: all 1s;
 }
 
-.skills.offset .progress{
+.skills.offset .progress {
     transform: translateX(-100%);
 }
 
@@ -383,64 +394,37 @@ body > main .downloadResume-wrapper {
     margin-bottom: 100px;
 }
 
-.portfolio nav {
-    text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 32px;
+.portfolio h2 {
+    margin-bottom: 32px;
 }
 
-.portfolio nav ol {
-    display: inline-block;
-    vertical-align: top;
+.portfolio .swiper-container {
+    width: 666px;
+    height: 444px;
+
 }
 
-.portfolio nav ol li {
-    float: left;
-    padding-left: 40px;
-    cursor: pointer;
+.portfolio .swiper-container:hover {
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.3);
 }
 
-.portfolio nav ol li:first-child {
-    padding-left: 0;
+.portfolio .swiper-button-prev,
+.portfolio .swiper-button-next {
+    background-color: #fff;
+    opacity: .5;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
 }
 
-.portfolio nav .bar {
-    height: 5px;
-    background: white;
-    margin-top: 5px;
-    margin-bottom: 50px;
-    border-radius: 2px;
+.portfolio .swiper-button-prev {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23e6686a'%2F%3E%3C%2Fsvg%3E")
 }
 
-.portfolio nav .bar .bar-inner {
-    height: 100%;
+.portfolio .swiper-button-next {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23e6686a'%2F%3E%3C%2Fsvg%3E")
+}
+
+.swiper-pagination-bullet-active {
     background: #e6686a;
-    border-radius: 2px;
-    transition: all 0.5s;
-}
-
-.portfolio nav .bar.state-1 .bar-inner {
-    margin-left: 0;
-    width: 32px;
-}
-
-.portfolio nav .bar.state-2 .bar-inner {
-    margin-left: 73px;
-    width: 63px;
-}
-
-.portfolio nav .bar.state-3 .bar-inner {
-    margin-left: 175px;
-    width: 105px;
-}
-
-.portfolio .works {
-    position: relative;
-
-}
-
-.portfolio .works .big,
-.portfolio .works .small {
-    position: absolute;
 }
