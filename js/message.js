@@ -71,7 +71,7 @@
                         li.innerText = `${object.attributes.name} : ${object.attributes.content}`
                         let messageList = document.getElementById('messageList')
                         messageList.appendChild(li)
-                        postMessageForm.querySelector('input[name=content]').value = ''//清空内容
+                        postMessageForm.querySelector('textarea[name=content]').value = ''//清空内容
                         postMessageForm.querySelector('input[name=name]').value = ''
                     })
             }
