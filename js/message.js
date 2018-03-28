@@ -60,17 +60,22 @@
         },
         saveMessage: function () {
             let postMessageForm = this.postMessageForm
-            let content = postMessageForm.querySelector('input[name=content]').value
+            let content = postMessageForm.querySelector('textarea[name=content]').value
             let name = postMessageForm.querySelector('input[name=name]').value
-            this.model.save(name, content)
-                .then(function (object) {
-                    let li = document.createElement('li')
-                    li.innerText = `${object.attributes.name} : ${object.attributes.content}`
-                    let messageList = document.getElementById('messageList')
-                    messageList.appendChild(li)
-                    postMessageForm.querySelector('input[name=content]').value = ''//清空内容
-                    postMessageForm.querySelector('input[name=name]').value = ''
-                })
+            if( name === ''||content ===''){
+                alert('输入名字和内容')
+            }else{
+                this.model.save(name, content)
+                    .then(function (object) {
+                        let li = document.createElement('li')
+                        li.innerText = `${object.attributes.name} : ${object.attributes.content}`
+                        let messageList = document.getElementById('messageList')
+                        messageList.appendChild(li)
+                        postMessageForm.querySelector('input[name=content]').value = ''//清空内容
+                        postMessageForm.querySelector('input[name=name]').value = ''
+                    })
+            }
+
         }
 
     }

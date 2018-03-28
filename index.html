@@ -169,16 +169,26 @@
         <div class="swiper-button-next"></div>
     </div>
 </section>
-<section class="message">
+<section data-x id="siteMessage" class="message offset">
     <h2>留言板</h2>
     <ol id="messageList"></ol>
-    <form id="postMessageForm" style=" width:700px ; margin: 50px auto">
-        <label for="">name</label>
-        <input type="text" name="name">
-        <label for="">content</label>
-        <input type="text" name="content">
-        <input type="submit" value="提交">
-    </form>
+    <div class="section-box">
+        <h3>我要留言</h3>
+        <form id="postMessageForm" class="postMessageForm">
+            <div class="input-field">
+                <label class="input" for="">名 字</label>
+                <input placeholder="Alice" class="contact-name" type="text" name="name">
+            </div>
+            <div class="input-field">
+                <label class="text" for="">留 言</label>
+                <textarea placeholder="写下你的留言吧..." name="content" cols="30" rows="8" class="content"></textarea>
+            </div>
+            <span class="btn-submit">
+            <input type="submit" value="提交">
+            </span>
+        </form>
+    </div>
+
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.js"></script>

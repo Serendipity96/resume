@@ -427,7 +427,75 @@ body > main .downloadResume-wrapper {
 .swiper-pagination-bullet-active {
     background: #e6686a;
 }
+.section-box{
+    margin: 50px auto;
+    min-height: 400px;
+    max-width: 700px;
+    background: white;
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.3);
+}
 
+.section-box h3{
+    color: #3D4451;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 30px;
+}
+.postMessageForm{
+    margin: 30px;
+}
+
+.postMessageForm .input-field input,
+.postMessageForm .input-field textarea
+{
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #e06567;
+    margin-top: 10px;
+    width: 400px;
+    font-size: 16px;
+    padding: 3px;
+}
+
+.postMessageForm .input-field input{
+    height: 32px;
+    margin-bottom: 15px;
+}
+
+.postMessageForm .input,
+.postMessageForm .text
+{
+    color: #303640;
+    font-size: 18px;
+}
+.postMessageForm .text{
+    display: inline-block;
+    padding-top: 70px;
+    vertical-align: top;
+}
+.postMessageForm .btn-submit{
+    float: right;
+    margin-top: -60px;
+    width: 100px;
+    height: 50px;
+    background-color: #e06567;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postMessageForm .btn-submit input{
+    cursor: pointer;
+    border: none;
+    background-color: #e06567;
+    color: white;
+    font-size: 16px;
+}
+.postMessageForm .btn-submit:hover{
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
 
 .message ol{
     max-width: 700px;
@@ -441,6 +509,3 @@ body > main .downloadResume-wrapper {
     border-bottom: 1px solid #ddd;
 }
 
-.message form{
-    margin: 0 auto;
-}

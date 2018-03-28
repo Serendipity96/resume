@@ -1,6 +1,6 @@
 !function () {
     var aTags = document.querySelectorAll('nav.menu ul li a');
-
+    // console.log(aTags)
     function animate(time) {
         requestAnimationFrame(animate);
         TWEEN.update(time);
@@ -16,7 +16,6 @@
             var href = a.getAttribute('href');//用户写什么，就获取什么
             var element = document.querySelector(href);
             var top = element.offsetTop;//获取元素距离顶部的距离
-
             var currentTop = window.scrollY;
             var targetTop = top - 100;
             var coords = {y: currentTop};

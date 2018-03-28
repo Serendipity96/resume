@@ -9,7 +9,6 @@
     window.onscroll = function () {
         if (window.scrollY > 0) {
             topNavBar.classList.add('sticky');
-            console.log(1)
         } else {
             topNavBar.classList.remove('sticky');
         }
