@@ -1,6 +1,5 @@
 !function () {
     var view = document.querySelector('section.message')
-
     var model = {
         init: function () {
             var APP_ID = 'js4Hnia8mb2Oa3489TTB1mUm-gzGzoHsz'
